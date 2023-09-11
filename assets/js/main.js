@@ -39,4 +39,8 @@ team.push(member1,member2,member3,member4,member5,member6);
 console.log(team);
 
 let domPortion = document.getElementById("container");
-domPortion.innerHTML = JSON.stringify(team);
+for (let index = 0; index < team.length; index++) {
+    let el = document.createElement("div");
+    el.innerHTML ="Name and Surname : " + team[index].firstSecondName + " ," + " role: " + team[index].role + " ," + " photo: " + team[index].photo;
+    domPortion.appendChild(el);
+}
